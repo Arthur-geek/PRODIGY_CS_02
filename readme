@@ -1,0 +1,89 @@
+
+*************************************
+Image Encryption Tool Documentation
+*************************************
+
+Overview
+    This Image Encryption Tool encrypts and decrypts images by swapping the red and blue channels of each pixel. Users can input an image, perform encryption or decryption, and save the processed image.
+
+Functions
+    encrypt_image(input_path, output_path, key=None)
+    Encrypts the input image by swapping the red and blue channels of each pixel.
+
+Parameters:
+
+    input_path (str): The file path of the input image to be encrypted.
+    output_path (str): The file path where the encrypted image will be saved.
+    key (None): Not used in this method, kept for consistency.
+Returns:
+
+    None
+Details:
+
+    The function opens the input image using the PIL library and accesses its pixels.
+    For each pixel, it swaps the red and blue channels, creating the encrypted pixel.
+    The encrypted pixels are saved to the specified output path.
+    A success message is displayed indicating that the image has been encrypted successfully.
+    decrypt_image(input_path, output_path, key=None)
+    Decrypts the input image by swapping the red and blue channels of each pixel back to their original values.
+
+Parameters:
+
+    input_path (str): The file path of the input image to be decrypted.
+    output_path (str): The file path where the decrypted image will be saved.
+    key (None): Not used in this method, kept for consistency.
+Returns:
+
+    None
+Details:
+
+    The function opens the input image using the PIL library and accesses its pixels.
+    For each pixel, it swaps the red and blue channels back to their original positions, creating the decrypted pixel.
+    The decrypted pixels are saved to the specified output path.
+    A success message is displayed indicating that the image has been decrypted successfully.
+    main()
+    Handles user interaction, allowing them to choose whether to encrypt or decrypt an image and specify the required parameters.
+
+Flow:
+
+    Welcomes the user and presents the option to encrypt or decrypt an image.
+    Prompts the user to input the image path and output path.
+    Calls the appropriate function (encrypt_image or decrypt_image) based on the user's choice.
+    Displays a message indicating the success of the operation.
+    Continues to offer encryption/decryption until the user decides to quit.
+Parameters:
+
+    None
+Returns:
+
+    None
+
+
+Usage
+    Run the program.
+    Choose whether to encrypt (E) or decrypt (D) an image.
+    Enter the file path of the image to be processed.
+    Enter the file path where the processed image will be saved.
+    The program will display a message indicating the success of the operation.
+    Optionally, choose to process another image or exit the program.
+
+Dependencies
+
+    Pillow: Python Imaging Library (PIL) fork for opening, manipulating, and saving image files.
+
+Installation
+
+To install the required library, use:
+    pip install pillow
+
+Additional Notes
+    Ensure you have the required library installed:
+    
+    pip install pillow
+    Place your input image in the directory where the script is run or provide the full path to the image.
+    The encryption key parameter is not used in this implementation but is included for consistency with other encryption methods.
+
+
+
+
+
